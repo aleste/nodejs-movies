@@ -182,3 +182,10 @@ definitions:
     properties:
       message:
         type: string
+securityDefinitions:
+  ApiKeyAuth:        # arbitrary name for the security scheme
+    type: apiKey
+    in: query       # can be "header", "query" or "cookie"
+    name: user_key  # name of the header, query parameter or cookie        
+security:
+  - ApiKeyAuth: []  
