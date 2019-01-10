@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: 0.0.1
   title: Lista de Películas
-host: 'nodejs-movies-3scale-apicast-production.ocp.arba.gov.ar:443'
+host: 'localhost:8080'
 basePath: /
 schemes:
   - http
@@ -11,14 +11,6 @@ consumes:
   - application/json
 produces:
   - application/json
-securityDefinitions:
-  user_key:
-    description: Your API access key
-    type: apiKey
-    in: query
-    name: user_key
-security:
-  - user_key: []
 paths:
   /movie:
     x-swagger-router-controller: movie
